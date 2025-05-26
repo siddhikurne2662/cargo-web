@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRK Logistics - International Freight Forwarding</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #001f3f;
+            --accent-gold: #ffd700;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #003366 100%);
+            color: var(--accent-gold);
+            background-attachment: fixed;
+        }
+        nav {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+body {
+    background: linear-gradient(135deg, #003366 0%, #001f3f 100%);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.7)),
+                url('ship.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .service-card {
+            background: rgba(0, 31, 63, 0.8);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+            transition: 0.5s;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 31, 63, 0.9), rgba(0, 31, 63, 0.8));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="30" fill="none"/><circle cx="15" cy="15" r="1" fill="%23ffd700" opacity="0.2"/></svg>');
+            opacity: 0.1;
+        }
+
+        .eco-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(52, 211, 153, 0.1);
+            border: 2px solid #34D399;
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: #34D399;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .eco-badge:hover {
+            background: rgba(52, 211, 153, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, var(--accent-gold), #FFA500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .quote-button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        .quote-button:hover::before {
+            left: 100%;
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+        }
+    </style>
+</head>
+<body class="font-sans min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-opacity-90 bg-blue-900 backdrop-filter backdrop-blur-lg sticky top-0 z-50 shadow-lg border-b border-yellow-400 border-opacity-20">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="index.html">
+                    <img src="logo2.png" alt="PRK LOGISTICS Logo" class="h-12 transform hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <a href="index.html">
+                        <h1 class="text-2xl font-bold text-yellow-400">PRK LOGISTICS</h1>
+                    </a>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="index.html" class="nav-link text-yellow-400 hover:text-yellow-300 transition-colors">Home</a>
+                    <a href="services.html" class="nav-link text-yellow-400 hover:text-yellow-300 transition-colors">Services</a>
+                    <a href="about.html" class="nav-link text-yellow-400 hover:text-yellow-300 transition-colors">About Us</a>
+                    <a href="contact.html" class="nav-link text-yellow-400 hover:text-yellow-300 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section min-h-screen flex items-center justify-center text-center px-4 relative">
+        <div class="eco-badge flex items-center space-x-2 cursor-pointer">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4.16 4.16a9.5 9.5 0 0112.68 0 9.5 9.5 0 010 12.68 9.5 9.5 0 01-12.68 0 9.5 9.5 0 010-12.68zM10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd"/>
+            </svg>
+            <span>Eco-Friendly Shipping</span>
+        </div>
+        <div class="max-w-4xl">
+            <div class="mb-8">
+                <h2 class="text-5xl font-bold mb-4 leading-tight">
+                    End-to-End <br>
+                    <span class="gradient-text border-b-4 border-yellow-400 pb-1">Global Logistics Solutions</span>
+                </h2>
+                <p class="text-2xl mb-6 px-6 text-yellow-300">
+                    Your trusted partner in international freight forwarding and logistics services.
+                </p>
+                <p class="text-lg mb-8 px-8 italic text-yellow-300 opacity-80">
+                    We dedicate all our efforts to gaining the trust and confidence of our clients
+                    through all the products and services that we offer.
+                </p>
+            </div>
+            <div class="space-y-6">
+                <a href="mailto:prklogistics1968@gmail.com"
+                   class="quote-button inline-block bg-yellow-400 text-blue-900 px-12 py-4 rounded-lg font-bold hover:bg-yellow-300 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    Get a Quote
+                </a>
+                <div class="flex justify-center items-center space-x-8 mt-12">
+                    <div class="flex items-center text-green-400 bg-green-400 bg-opacity-10 px-4 py-2 rounded-lg">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Sustainable Operations</span>
+                    </div>
+                    <div class="flex items-center text-green-400 bg-green-400 bg-opacity-10 px-4 py-2 rounded-lg">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Eco-Conscious Shipping</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card rounded-xl p-8 flex flex-col items-center text-center">
+                    <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Sea Exports</h3>
+                    <p class="text-yellow-300">Reliable sea export services for international shipments with eco-friendly options. Also accepting pan India basis exports booking.</p>
+                </div>
+
+                <div class="service-card rounded-xl p-8 flex flex-col items-center text-center">
+                    <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Sea Import</h3>
+                    <p class="text-yellow-300">Efficient import solutions via optimized sea routes reducing carbon footprint.</p>
+                </div>
+
+                <div class="service-card rounded-xl p-8 flex flex-col items-center text-center">
+                    <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Buyers Consolidation</h3>
+                    <p class="text-yellow-300">Optimize shipping costs and environmental impact with consolidated cargo solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 bg-opacity-80 py-8 border-t border-yellow-400 border-opacity-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <p class="text-yellow-400">&copy; 2025 PRK Logistics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

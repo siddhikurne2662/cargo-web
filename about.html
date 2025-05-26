@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PRK Logistics</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #001f3f;
+            --accent-gold: #ffd700;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #003366 100%);
+            color: var(--accent-gold);
+            background-attachment: fixed;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .about-card {
+            background: rgba(0, 31, 63, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+            transition: 0.8s;
+        }
+
+        .about-card:hover::before {
+            left: 100%;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .content-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+
+        .content-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, var(--accent-gold), #FFA500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .highlight-box {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .highlight-box:hover {
+            background: rgba(255, 215, 0, 0.15);
+            transform: scale(1.02);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(0, 31, 63, 0.6);
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 31, 63, 0.8);
+        }
+
+        .number-animate {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+        nav {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+body {
+    background: linear-gradient(135deg, #003366 0%, #001f3f 100%);
+}
+
+
+    </style>
+</head>
+<body class="font-sans min-h-screen">
+    <!-- Navigation remains the same -->
+    <nav class="bg-opacity-90 bg-blue-900 backdrop-filter backdrop-blur-lg sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="index.html">
+                        <img src="logo2.png" alt="PRK LOGISTICS Logo" class="h-12 transform hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <a href="index.html">
+                        <h1 class="text-2xl font-bold text-yellow-400">PRK LOGISTICS</h1>
+                    </a>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="index.html" class="nav-link text-yellow-400 hover:text-yellow-300 transition-colors">Home</a>
+                    <a href="services.html" class="nav-link text-yellow-400 hover:text-yellow-300 transition-colors">Services</a>
+                    <a href="about.html" class="nav-link text-yellow-400 hover:text-yellow-300 transition-colors">About Us</a>
+                    <a href="contact.html" class="nav-link text-yellow-400 hover:text-yellow-300 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced About Us Section -->
+    <div class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="about-card rounded-xl p-12">
+                <div class="content-section">
+                    <h2 class="text-4xl font-bold mb-8 text-center">
+                        <span class="gradient-text">About PRK Logistics</span>
+                    </h2>
+                    <div class="space-y-6">
+                        <p class="text-xl text-yellow-300">
+                            At PRK Logistics, we specialize in providing top-tier international freight forwarding and logistics solutions. With years of experience in the industry, we ensure seamless, reliable, and cost-effective shipping solutions tailored to meet the unique needs of our clients.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-box content-section">
+                    <h3 class="text-2xl font-bold mb-4 text-yellow-400">Our Mission</h3>
+                    <p class="text-xl text-yellow-300">
+                        To bridge the gap between businesses and global markets by offering exceptional logistics services that prioritize efficiency, security, and customer satisfaction.
+                    </p>
+                </div>
+
+                <div class="highlight-box content-section">
+                    <h3 class="text-2xl font-bold mb-4 text-yellow-400">Our Expertise</h3>
+                    <p class="text-xl text-yellow-300">
+                        From sea exports and imports to consolidation services, we are your trusted partner in international trade and logistics. Our team of experts ensures smooth operations and timely deliveries across global supply chains.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer remains the same -->
+    <footer class="bg-blue-900 bg-opacity-80 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <p class="text-yellow-400">&copy; 2025 PRK Logistics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.content-section').forEach((section) => {
+            observer.observe(section);
+        });
+
+        // Number animation
+        const numberElements = document.querySelectorAll('.number-animate');
+        numberElements.forEach(el => {
+            el.addEventListener('mouseover', () => {
+                el.style.transform = 'scale(1.1)';
+            });
+            el.addEventListener('mouseout', () => {
+                el.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
